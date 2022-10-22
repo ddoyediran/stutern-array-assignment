@@ -53,3 +53,19 @@ function valTimesIndex(anArrayOfNumber){
 
 console.log(valTimesIndex([1,2,3])) // [0,2,6]
 console.log(valTimesIndex([5,10,15])) // [0, 10, 30]
+
+
+/// Question 5 ///
+
+function addKeyAndValue(anArray, aKey, aValue){
+  let result = anArray.map((value) => {
+    return value.aKey = value
+  })
+  
+  return result
+}
+
+
+console.log(addKeyAndValue([{name:'Joshua'},{name:'Mark'},{name:'Arthur'}],"isInstructor", true))
+
+
