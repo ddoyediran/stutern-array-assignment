@@ -40,3 +40,16 @@ function printFirstAndLast(anArrayOfString){
 }
 
 console.log(printFirstAndLast(['awesome','example','of','forEach'])) // 'ae' 'ee' 'of' 'fh'
+
+
+// Question 4 //
+function valTimesIndex(anArrayOfNumber){
+  let result = anArrayOfNumber.map((num, index) => {
+    return num * index;
+  })
+  
+  return result;
+}
+
+console.log(valTimesIndex([1,2,3])) // [0,2,6]
+console.log(valTimesIndex([5,10,15])) // [0, 10, 30]
