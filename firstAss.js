@@ -69,3 +69,20 @@ function addKeyAndValue(anArray, aKey, aValue){
 console.log(addKeyAndValue([{name:'Joshua'},{name:'Mark'},{name:'Arthur'}],"isInstructor", true))
 
 
+
+function addKeyAndValue(anArray, aKey, aValue){
+  let resArr = []
+  let result = anArray.reduce((acc, initialVal) => {
+    resArr = [...acc]
+    //resArr = [...acc, [aKey]: aValue]
+    //[...acc, ...initialVal, [aKey]: aValue]
+  })
+  
+  return result
+}
+
+
+console.log(addKeyAndValue([{name:'Joshua'},{name:'Mark'},{name:'Arthur'}], "isInstructor", true))
+
+
+
