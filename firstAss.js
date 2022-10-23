@@ -149,3 +149,20 @@ let users = [
 
 
 printEmail(users)
+
+
+/// Question 7 ///
+
+function printHobbies(anArrayOfObj){
+  
+  anArrayOfObj.map(value => {
+    value.hobbies.map((hobby) => {
+      console.log(hobby)
+    })
+  })
+  
+}
+
+
+
+printHobbies(users)
