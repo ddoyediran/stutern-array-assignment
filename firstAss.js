@@ -166,3 +166,16 @@ function printHobbies(anArrayOfObj){
 
 
 printHobbies(users)
+
+
+/// Question 8 ///
+
+function findHometownByState(anArrayOfObj){
+  let result = anArrayOfObj.filter((user) => {
+    return user.hometown.state === "CA"
+  })
+  
+  return result[0]
+}
+
+console.log(findHometownByState(users))
