@@ -58,10 +58,10 @@ console.log(valTimesIndex([5,10,15])) // [0, 10, 30]
 /// Question 5 ///
 
 function addKeyAndValue(anArray, aKey, aValue){
-  let emptyArr =[]
-  anArray.reduce ((acc, initialValue) => {
-    initialValue[aKey]= aValue
-    emptyArr.push(initialValue)
+  let emptyArr = []
+  anArray.reduce((initialValue, currentValue) => {
+    currentValue[aKey]= aValue
+    emptyArr.push(currentValue)
   },{})  
   return emptyArr
 }
