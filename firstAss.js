@@ -58,31 +58,13 @@ console.log(valTimesIndex([5,10,15])) // [0, 10, 30]
 /// Question 5 ///
 
 function addKeyAndValue(anArray, aKey, aValue){
-  let result = anArray.map((value) => {
-    return value.aKey = value
-  })
-  
-  return result
+  let emptyArr =[]
+  anArray.reduce ((acc, initialValue) => {
+    initialValue[aKey]= aValue
+    emptyArr.push(initialValue)
+  },{})  
+  return emptyArr
 }
 
 
 console.log(addKeyAndValue([{name:'Joshua'},{name:'Mark'},{name:'Arthur'}],"isInstructor", true))
-
-
-
-function addKeyAndValue(anArray, aKey, aValue){
-  let resArr = []
-  let result = anArray.reduce((acc, initialVal) => {
-    resArr = [...acc]
-    //resArr = [...acc, [aKey]: aValue]
-    //[...acc, ...initialVal, [aKey]: aValue]
-  })
-  
-  return result
-}
-
-
-console.log(addKeyAndValue([{name:'Joshua'},{name:'Mark'},{name:'Arthur'}], "isInstructor", true))
-
-
-
