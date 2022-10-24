@@ -70,8 +70,6 @@ function addKeyAndValue(anArray, aKey, aValue){
 console.log(addKeyAndValue([{name:'Joshua'},{name:'Mark'},{name:'Arthur'}],"isInstructor", true))
 
 
-
-
 /// Question 6 ///
 function printEmail(anArrayOfObj){
   
@@ -163,13 +161,22 @@ function printHobbies(anArrayOfObj){
   
 }
 
-
-
 printHobbies(users)
 
 
 /// Question 8 ///
 
+function findHometownByState(anArrayOfObj){
+  return anArrayOfObj.find((user) => {
+    return user["hometown"]["state"] === "CA";
+  })
+}
+
+
+
+console.log(findHometownByState(users));
+
+// another way //
 function findHometownByState(anArrayOfObj){
   let result = anArrayOfObj.filter((user) => {
     return user.hometown.state === "CA"
