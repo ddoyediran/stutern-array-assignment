@@ -172,32 +172,30 @@ function findHometownByState(anArrayOfObj){
   })
 }
 
-
-
 console.log(findHometownByState(users));
 
 // another way //
 function findHometownByState(anArrayOfObj){
   let result = anArrayOfObj.filter((user) => {
-    return user.hometown.state === "CA"
+    return user.hometown.state === "CA";
   })
   
-  return result[0]
+  return result[0];
 }
 
 console.log(findHometownByState(users))
 
 /// Question 9 ///
 function allLanguages(anArrayOfObject) {
-  let languageArray = []
+  let languageArray = [];
    anArrayOfObject.map((languages) => {
      languages.favoriteLanguages.map((language) => {
        if (languageArray.includes(language) === false ){
-         languageArray.push(language)
+         languageArray.push(language);
        }
      }) 
   });
-    return languageArray
+    return languageArray;
 }
 
 console.log(allLanguages(users)) // ['Perl', 'Java', 'C++', 'Haskell', 'Clojure', 'PHP', 'JavaScript', 'Ruby', 'Python', 'Go', 'C#', 'F#', 'Swift']
