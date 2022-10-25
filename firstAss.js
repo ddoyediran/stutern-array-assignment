@@ -190,8 +190,8 @@ console.log(findHometownByState(users))
 /// Question 9 ///
 function allLanguages(anArrayOfObject) {
   let languageArray = []
-   anArrayOfObject.map(function (languages) {
-     languages.favoriteLanguages.map ((language) => {
+   anArrayOfObject.map((languages) => {
+     languages.favoriteLanguages.map((language) => {
        if (languageArray.includes(language) === false ){
          languageArray.push(language)
        }
@@ -199,5 +199,6 @@ function allLanguages(anArrayOfObject) {
   });
     return languageArray
 }
+
 console.log(allLanguages(users)) // ['Perl', 'Java', 'C++', 'Haskell', 'Clojure', 'PHP', 'JavaScript', 'Ruby', 'Python', 'Go', 'C#', 'F#', 'Swift']
 
