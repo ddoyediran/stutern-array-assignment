@@ -186,3 +186,18 @@ function findHometownByState(anArrayOfObj){
 }
 
 console.log(findHometownByState(users))
+
+/// Question 9 ///
+function allLanguages(anArrayOfObject) {
+  let languageArray = []
+   anArrayOfObject.map(function (languages) {
+     languages.favoriteLanguages.map ((language) => {
+       if (languageArray.includes(language) === false ){
+         languageArray.push(language)
+       }
+     }) 
+  });
+    return languageArray
+}
+console.log(allLanguages(users)) // ['Perl', 'Java', 'C++', 'Haskell', 'Clojure', 'PHP', 'JavaScript', 'Ruby', 'Python', 'Go', 'C#', 'F#', 'Swift']
+
