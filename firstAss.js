@@ -245,4 +245,18 @@ console.log(vowelCount("awesome")) // { a: 1, e: 2, o: 1 }
 console.log(vowelCount("damilare")) // { a: 2, i: 1, e: 1 }
 
 
+/// Question 13 ///
+
+function removeVowels(word){
+  let newArray = []
+  for (let letter of word){
+    if (!vowels.includes(letter)){
+      newArray.push(letter);
+    }
+  }
+  return newArray;
+}
+
+console.log(removeVowels('amazing')); // ['m', 'z', 'n', 'g']
+console.log(removeVowels('damilare')); // ['d', 'm', 'l', 'r']
 
