@@ -223,5 +223,26 @@ console.log(findByUsername(users, "david")) // [{ username: 'david', email: 'dav
 
 
 
+/// Question 12 ///
+const vowels = ["a", "e", "i", "o", "u"];
+
+function vowelCount(word) {
+  let resultObj = {};
+  for (let char of word) {
+    if (vowels.includes(char)) {
+      if (resultObj.hasOwnProperty(char)) {
+        resultObj[char] = resultObj[char] + 1;
+      } else {
+        resultObj[char] = 1;
+      }
+    }
+  }
+    return resultObj
+}
+
+
+console.log(vowelCount("awesome")) // { a: 1, e: 2, o: 1 }
+console.log(vowelCount("damilare")) // { a: 2, i: 1, e: 1 }
+
 
 
