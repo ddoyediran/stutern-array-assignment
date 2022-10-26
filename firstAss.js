@@ -212,4 +212,16 @@ console.log(hasFavoriteEditor(users, "Vim")) // true
 console.log(hasFavoriteEditor(users, "BlueJ")) // false
 
 
+/// Question 11 ///
+function findByUsername(anArrayOfObject, nameOfUser) {
+  return anArrayOfObject.filter((user) => {
+    return user["username"] === nameOfUser;
+  });
+}
+
+console.log(findByUsername(users, "david")) // [{ username: 'david', email: 'david@test.com', yearsExperience: 12.5, favoriteLanguages: ['JavaScript', 'C#', 'Swift'], favoriteEditor: 'VS Code', hobbies: ['Volunteering', 'Biking', 'Coding'], hometown: { city: 'Los Angeles', state: 'CA' } }]
+
+
+
+
 
