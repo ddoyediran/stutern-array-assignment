@@ -200,3 +200,15 @@ function allLanguages(anArrayOfObject) {
 
 console.log(allLanguages(users)) // ['Perl', 'Java', 'C++', 'Haskell', 'Clojure', 'PHP', 'JavaScript', 'Ruby', 'Python', 'Go', 'C#', 'F#', 'Swift']
 
+
+/// Question 10 ///
+function hasFavoriteEditor(anArrayOfObject, editor) {
+  return anArrayOfObject.some((user) => {
+    return user["favoriteEditor"] === editor;
+  });
+}
+
+console.log(hasFavoriteEditor(users, "Vim")) // true
+console.log(hasFavoriteEditor(users, "BlueJ")) // false
+
+
